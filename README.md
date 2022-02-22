@@ -1,4 +1,4 @@
-# tut-4-calendar
+# Vue3 Heros List Component
 
 ## Project setup
 ```
@@ -22,3 +22,5 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+# Vue3-Tutorials-Heros
+# Vue3-Tutorials-Calendar
