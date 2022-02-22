@@ -9,10 +9,10 @@
 
 <script>
   import AppHeader from "./components/AppHeader";
-  import Calendar from "./components/Calendar"
+  // import Calendar from "./components/Calendar"
 export default {
   components: {
-    AppHeader, Calendar
+    AppHeader
   },
 };
 </script>
