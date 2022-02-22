@@ -28,7 +28,7 @@
       <p
         class="text-center"
         style="width: 14.285%"
-        v-for="num in daysInMonth(currentYear, currentMonth)"
+        v-for="num in daysInMonth()"
         :key="num"
       >
         {{ num }}
@@ -52,8 +52,8 @@ export default {
   },
 
   methods: {
-    daysInMonth(year, month) {
-      return new Date(2022, month + 1, 0).getDate();
+    daysInMonth() {
+      return new Date(this.currentYear, this.currentMonth + 1, 0).getDate();
     },
     startDay() {
       return new Date(this.currentYear, this.currentMonth).getDay();
