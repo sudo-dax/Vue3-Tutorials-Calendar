@@ -30,6 +30,7 @@
         style="width: 14.285%"
         v-for="num in daysInMonth()"
         :key="num"
+        :class="currentDateClass(num)"
       >
         {{ num }}
       </p>
@@ -45,6 +46,7 @@
 export default {
   data() {
     return {
+        currentDate: new Date().getDate(),
       currentMonth: new Date().getMonth(),
       currentYear: new Date().getFullYear(),
       days: ["Sun", "Mon", "Tues", "Wed", "Thu", "Fri", "Sat"],
@@ -74,6 +76,13 @@ export default {
             this.currentMonth--;
         }
     },
+    currentDateClass(num) {
+        // console.log(new Date(this.currentYear, this.currentMonth, num).toDateString())
+        // console.log(new Date().toDateString())
+        const calendarFullDate = new Date(this.currentYear, this.currentMonth, num).toDateString()
+        const currentFullDate = new Date().toDateString()
+        return calendarFullDate === currentFullDate ? 'text-red-700' : ""
+    }
   },
 
   computed: {
